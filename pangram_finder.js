@@ -5,12 +5,7 @@ const PangramFinder = function (phrase) {
 }
 
 PangramFinder.prototype.isPangram = function () {
-  const result = this.alphabet.every(character => this.phraseArray.includes(character));
-  if (result) {
-    return result;
-  } else {
-    return false;
-  };
+  return this.alphabet.every(character => this.phraseArray.includes(character));
 }
 
 module.exports = PangramFinder;
